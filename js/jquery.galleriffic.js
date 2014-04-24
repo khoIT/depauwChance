@@ -625,12 +625,11 @@
 				var gallery = this;
 				var nextIndex = this.getNextIndex(imageData.index);
 
-
 				// Construct new hidden span for the image
 				var newSlide = this.$imageContainer
 					.append('<span class="image-wrapper current"><a class="advance-link" rel="history" href="#'+this.data[nextIndex].hash+'" title="'+imageData.title+'">&nbsp;</a></span>')
 					.find('span.current').css('opacity', '0');
-				
+
 				newSlide.find('a')
 					.append(imageData.image)
 					.click(function(e) {
@@ -664,7 +663,7 @@
 					if (this.slideshowTimeout)
 						clearTimeout(this.slideshowTimeout);
 					var d = new Date();
-					if (d.getSeconds()%30 == 0){
+					if (d.getSeconds()%20 == 0){
 						if (window.console) console.log(d.getSeconds());
 						this.slideshowTimeout = setTimeout(function() { gallery.ssAdvance(); }, Math.random()*4000+3000);
 						$('span.image-wrapper.current img').addClass("Imagedropshadow");

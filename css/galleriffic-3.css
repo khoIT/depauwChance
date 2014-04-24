@@ -32,7 +32,7 @@ div.nav-controls {
 div.slideshow-container {
 	position: relative;
 	clear: both;
-	height: 293px; /* This should be set to be at least the height of the largest image in the slideshow */
+	height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
 }
 div.loader {
 	position: absolute;
@@ -48,7 +48,6 @@ div.slideshow {
 
 }
 div.slideshow span.image-wrapper {
-	width: 100%
 	display: block;
 	position: absolute;
 	top: 0;
@@ -57,8 +56,8 @@ div.slideshow span.image-wrapper {
 div.slideshow a.advance-link {
 	display: block;
 	width: 550px;
-	height: 293px; /* This should be set to be at least the height of the largest image in the slideshow */
-	line-height: 293px; /* This should be set to be at least the height of the largest image in the slideshow */
+	height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+	line-height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
 	text-align: center;
 }
 div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
@@ -133,7 +132,7 @@ div.navigation div.top {
 div.navigation div.bottom {
 	margin-top: 12px;
 }
-div.pagination a, div.pagination, span.current, div.pagination span.ellipsis {
+div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
 	font: normal 11px/1 arial,sans-serif;
 	display: block;
 	float: left;
@@ -141,9 +140,6 @@ div.pagination a, div.pagination, span.current, div.pagination span.ellipsis {
 	padding: 4px 7px 2px 7px;
 	/*border: 1px solid #ccc;*/
 }
-
-.imagedropshadow { padding: 5px; border: solid 1px #EFEFEF; }
-
 div.pagination a:hover {
 	
 	text-decoration: none;
@@ -158,343 +154,4 @@ div.pagination span.ellipsis {
 	padding: 5px 0 3px 2px;
 }
 
-.float {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:480px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-
-.float2 {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:452px;
-    }
-    100% {
-        top: 28px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-
-.float3 {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:424px;
-    }
-    100% {
-        top: 56px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:396px;
-    }
-    100% {
-        top: 84px;
-    }
-}
-
-.float4 {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:368px;
-    }
-    100% {
-        top: 112px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-
-.float5 {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:340px;
-    }
-    100% {
-        top:140px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-.float6 {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top: 312px;
-    }
-    100% {
-        top: 168px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-.float7 {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:284px;
-    }
-    100% {
-        top: 196px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-.float8 {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:256px;
-    }
-    100% {
-        top: 224px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-.float9 {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:228px;
-    }
-    100% {
-        top: 252px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-.float10 {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:200px;
-    }
-    100% {
-        top: 280px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-.float11 {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:172px;
-    }
-    100% {
-        top: 308px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-.float12 {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:144px;
-    }
-    100% {
-        top: 336px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-.float13 {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:116px;
-    }
-    100% {
-        top: 364px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-.float14 {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:188px;
-    }
-    100% {
-        top: 392px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-.float {
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:480px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-.float 17{
-    position: relative;
-    -webkit-animation: floatBubble 5s infinite  normal ease-out;
-    animation: floatBubble 2s infinite  normal ease-out;
-}
-@-webkit-keyframes floatBubble {
-    0% {
-        top:0px;
-    }
-    100% {
-        top: -480px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:500px;
-    }
-    100% {
-        top: 0px;
-    }
-}
+.imagedropshadow { padding: 5px; border: solid 1px #EFEFEF; }
