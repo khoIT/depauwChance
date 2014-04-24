@@ -66,7 +66,7 @@
 	var defaults = {
 		delay:                     3000,
 		numThumbs:                 198,
-		preloadAhead:              40, // Set to -1 to preload all images
+		preloadAhead:              50, // Set to -1 to preload all images
 		enableTopPager:            false,
 		enableBottomPager:         true,
 		maxPagesToShow:            7,
@@ -100,6 +100,8 @@
 	$.fn.galleriffic = function(settings) {
 		//  Extend Gallery Object
 		$.extend(this, {
+			
+			
 			// Returns the version of the script
 			version: $.galleriffic.version,
 
