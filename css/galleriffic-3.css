@@ -14,6 +14,9 @@ div.content a:focus, div.content a:hover, div.content a:active {
 
 div#footer{
 	font: normal 11px/1 arial,sans-serif;
+	float:right;
+	display:inline;
+	margin-right:53px;
 }
 
 div.controls {
@@ -52,6 +55,7 @@ div.slideshow span.image-wrapper {
 	position: absolute;
 	top: 0;
 	left: 0;
+	width:100%;
 }
 div.slideshow a.advance-link {
 	display: block;
@@ -59,6 +63,7 @@ div.slideshow a.advance-link {
 	height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
 	line-height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
 	text-align: center;
+	width: 100%;
 }
 div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
 	text-decoration: none;

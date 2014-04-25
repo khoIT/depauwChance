@@ -3,23 +3,27 @@ body{
 	color: #bbb;
 }
 a{
-	color: #009900;
+	color: #5bc236;
 	text-decoration: none;
 }
 h1{
-	font: bold 12px/1.1 arial,sans-serif;
+	font: bold 14px/1.1 arial,sans-serif;
+	color: #fff;
+	float:left;
+	margin: 0 0 5 0;
 }
 h2 {
-	font: normal 11px/1 arial,sans-serif;
+	font: normal 12px/1 arial,sans-serif;
 	color: #ccc;
+	float:left;
+	clear:left;
 }
+
 div#page {
 	background-color: #000;
 	border-color: #222;
 }
-div#footer {
-	color: #888;
-}
+
 div.caption-container {
 	color: #eee;
 }
@@ -121,11 +125,11 @@ margin-right: 10px;
     margin: 10px;
 }
 
-h1{
-	color: #fff;
-	margin: 0 0 10 0;
-}
-
 #container{
 	margin-top: 50px;
+}
+
+#gallery{
+	float:left;
+	width:75%;
 }
