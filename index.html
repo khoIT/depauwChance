@@ -18,9 +18,13 @@
 <body>
 
 <div id="page">
+      <div id="header" style="display:block">
+      <div id="header-content">
+        <h1 id="toggle">Chance</h1>
+        <h2 id="toggel">A Memory Experience at DePauw</h2>
+      </div>
+      </div>
       <div id="container">
-            <h1>Chance</h1>
-            <h2>A Memory Experience at DePauw</h2>
             <!-- Start Advanced Gallery Html Containers -->
 
             <div id="gallery" class="content">
@@ -534,7 +538,29 @@
       </div>
     <div id="footer">&copy; <a href="https://twitter.com/kh0i"> Khoi</a>. Supported by <a href="http://oxfammexico.org/crece/galeria/">Gallerific</a></div>
    <script type="text/javascript">
-    //load other html images file
+    
+      //Auto hide menu bar
+      var timeout = null;
+      var initialMargin = parseInt($("#header").css("margin-top"));
+
+      $("#header").hover(
+      function() {
+            if (timeout) {
+            clearTimeout(timeout);
+            timeout = null;
+      }
+      $(this).animate({ 'margin-top': 0 }, 'fast');
+      },
+
+      function() {
+            var menuBar = $(this);
+            timeout = setTimeout(function() {
+            timeout = null;
+            menuBar.animate({ marginTop: initialMargin }, 'slow');
+      }, 1000);
+      }
+      );
+      //load other html images file
             $.ajax({url: "b.html",
                   type:'GET',
                   async: false,
@@ -636,6 +662,7 @@
 
             /****************************************************************************************/
       });
+
 </script>
 
   </body>
