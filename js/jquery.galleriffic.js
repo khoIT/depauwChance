@@ -7,6 +7,7 @@
  *
  * Much thanks to primary contributer Ponticlaro (http://www.ponticlaro.com)
  */
+
 ;(function($) {
 	// Globally keep track of all images by their unique hash.  Each item is an image data object.
 	var allImages = {};
@@ -62,9 +63,9 @@
 			return gallery.removeImageByIndex(imageData.index);
 		}
 	};
-
+	
 	var defaults = {
-		delay:                     3000,
+		delay:                     300,
 		numThumbs:                 198,
 		preloadAhead:              50, // Set to -1 to preload all images
 		enableTopPager:            false,
@@ -665,9 +666,14 @@
 					if (this.slideshowTimeout)
 						clearTimeout(this.slideshowTimeout);
 					var d = new Date();
+					if (speed!=0)
+						this.delay = speed*200;
+					else 
+						this.delay = defaults['delay'];
+
 					if (d.getSeconds()%20 == 0){
 						if (window.console) console.log(d.getSeconds());
-						this.slideshowTimeout = setTimeout(function() { gallery.ssAdvance(); }, Math.random()*4000+3000);
+						this.slideshowTimeout = setTimeout(function() { gallery.ssAdvance(); }, Math.random()*3000+4000);
 						$('span.image-wrapper.current img').addClass("Imagedropshadow");
 					}
 					else 

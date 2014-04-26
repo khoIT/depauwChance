@@ -25,10 +25,13 @@
         <div id="footer">&copy; <a href="https://twitter.com/kh0i"> Khoi</a>. Supported by <a href="http://oxfammexico.org/crece/galeria/">Gallerific</a></div>
       </div>
       </div>
+      
       <div id="container">
             <!-- Start Advanced Gallery Html Containers -->
+            <input id="speed" type="range" min="0" max="5" value="0" onchange="changeSpeed(this.value)" />
+            <span id="range">0</span>
 
-            <div id="gallery" class="content">
+             <div id="gallery" class="content">
         <div id="controls" class="controls"></div>
         <div class="slideshow-container">
           <div id="loading" class="loader"></div>
@@ -539,7 +542,13 @@
       </div>
     
    <script type="text/javascript">
-    
+      var speed = 0;
+      //update speed for gallery
+      function changeSpeed(newValue)
+      {
+            document.getElementById("range").innerHTML=newValue;
+            speed = newValue;
+      }
       //Auto hide menu bar
       var timeout = null;
       var initialMargin = parseInt($("#header").css("margin-top"));
@@ -553,7 +562,7 @@
       $(this).animate({ 'margin-top': 0 }, 'fast');
       },
 
-      function() {
+      function () {
             var menuBar = $(this);
             timeout = setTimeout(function() {
             timeout = null;
@@ -567,6 +576,7 @@
                   async: false,
                   success: function (data) { $('#imagelist').append(data);},
                   dataType: 'html'});
+
 
       jQuery(document).ready(function($) {
             //disbale clicking thumb
@@ -587,7 +597,7 @@
 
             // Initialize Advanced Galleriffic Gallery
             var gallery = $('#thumbs').galleriffic({
-                  delay:                     300,
+                  delay:                     100,
                   numThumbs:                 198,
                   preloadAhead:              50,
                   enableTopPager:            true,
@@ -623,6 +633,7 @@
                   }
             });
 
+            
             /**** Functions to support integration of galleriffic with the jquery.history plugin ****/
 
             // PageLoad function
