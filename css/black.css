@@ -127,11 +127,12 @@ margin-right: 10px;
 
 #container{
 	margin-top: 50px;
+	padding-bottom: 180px;
 }
 
 #gallery{
 	float:left;
-	width:75%;
+	width:40%;
 }
 
 #count{
@@ -149,4 +150,18 @@ margin-right: 10px;
 	float:left;
 	margin-right: 10px;
 	padding-bottom: 10px;
+}
+
+#placeholder{
+	margin-bottom: 86px;
+	width: 60%;
+}
+
+#speedbar{
+	float:left;
+}
+
+#rightcolumn{
+	width: 60%;
+	float: right;
 }

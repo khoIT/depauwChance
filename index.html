@@ -38,9 +38,14 @@
       
       <div id="container">
             <!-- Start Advanced Gallery Html Containers -->
-            <input id="speed" type="range" min="0" max="5" value="0" onchange="changeSpeed(this.value)" />
-            <span id="range">0</span>
-
+         <div id="rightcolumn">
+            <br>
+            <div id="placeholder"><br></div>
+            <div id="speedbar">
+                  <input id="speed" type="range" min="0" max="5" value="1" onchange="changeSpeed(this.value)" />
+                  <span id="range">0</span>
+            </div>
+         </div>         
          <div id="gallery" class="content">
             <div id="controls" class="controls">
             </div>
@@ -609,10 +614,11 @@
 
 
       jQuery(document).ready(function($) {
-            //disbale clicking thumb
+            //disbale clicking thumb and top pagination
             $('li a').click(function(){return false;});
+            
             // We only want these styles applied when javascript is enabled
-            $('div.navigation').css({'width' : '300px', 'float' : 'left'});
+            $('div.navigation').css({'width' : '40%', 'float' : 'left'});
             $('div.content').css('display', 'block');
 
             // Initially set opacity on thumbs and add
@@ -628,7 +634,7 @@
             // Initialize Advanced Galleriffic Gallery
             var gallery = $('#thumbs').galleriffic({
                   delay:                     3000,
-                  numThumbs:                 198,
+                  numThumbs:                 180,
                   preloadAhead:              50,
                   enableTopPager:            true,
                   enableBottomPager:         true,
