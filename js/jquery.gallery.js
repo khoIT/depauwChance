@@ -84,10 +84,10 @@
 		nextPageLinkText:          'Next &rsaquo;',
 		prevPageLinkText:          '&lsaquo; Prev',
 		enableHistory:             false,
-		enableKeyboardNavigation:  true,
+		enableKeyboardNavigation:  false,
 		autoStart:                 false,
 		syncTransitions:           false,
-		defaultTransitionDuration: 1000,
+		defaultTransitionDuration: 30,
 		onSlideChange:             undefined, // accepts a delegate like such: function(prevIndex, nextIndex) { ... }
 		onTransitionOut:           undefined, // accepts a delegate like such: function(slide, caption, isSync, callback) { ... }
 		onTransitionIn:            undefined, // accepts a delegate like such: function(slide, caption, isSync) { ... }
@@ -586,7 +586,8 @@
 					if (this.onTransitionOut) {
 						this.onTransitionOut(previousSlide, previousCaption, isSync, transitionOutCallback);
 					} else {
-						previousSlide.fadeTo(this.getDefaultTransitionDuration(isSync), 0.0, transitionOutCallback);
+						/*previousSlide.fadeTo(this.getDefaultTransitionDuration(isSync), 0.0, transitionOutCallback);*/
+						previousSlide.fadeTo(300, 0.0, transitionOutCallback);
 						if (previousCaption)
 							previousCaption.fadeTo(this.getDefaultTransitionDuration(isSync), 0.0);
 					}
@@ -657,7 +658,8 @@
 				if (this.onTransitionIn) {
 					this.onTransitionIn(newSlide, newCaption, isSync);
 				} else {
-					newSlide.fadeTo(this.getDefaultTransitionDuration(isSync), 1.0);
+					/*newSlide.fadeTo(this.getDefaultTransitionDuration(isSync), 1.0);*/
+					newSlide.css('opacity','1');
 					if (newCaption)
 						newCaption.fadeTo(this.getDefaultTransitionDuration(isSync), 1.0);
 				}

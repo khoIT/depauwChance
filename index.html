@@ -41,15 +41,19 @@
             <input id="speed" type="range" min="0" max="5" value="0" onchange="changeSpeed(this.value)" />
             <span id="range">0</span>
 
-             <div id="gallery" class="content">
-        <div id="controls" class="controls"></div>
-        <div class="slideshow-container">
-          <div id="loading" class="loader"></div>
-          <div id="slideshow" class="slideshow"></div>
-        </div>
-        <div id="caption" class="caption-container"></div>
-      </div>
-      <div id="transparent"></div>
+         <div id="gallery" class="content">
+            <div id="controls" class="controls">
+            </div>
+            <div class="slideshow-container">
+                  <div id="loading" class="loader"></div>
+                  <div id="slideshow" class="slideshow"></div>
+            </div>
+            <div id="caption" class="caption-container">
+            </div>
+         </div>
+         <div id="transparent">
+         </div>
+      
       <div id="thumbs" class="navigation">
         <ul id="imagelist" class="thumbs noscript jcarousel">
 
@@ -623,7 +627,7 @@
 
             // Initialize Advanced Galleriffic Gallery
             var gallery = $('#thumbs').galleriffic({
-                  delay:                     100,
+                  delay:                     3000,
                   numThumbs:                 198,
                   preloadAhead:              50,
                   enableTopPager:            true,
@@ -633,7 +637,7 @@
                   controlsContainerSel:      '#controls',
                   captionContainerSel:       '#caption',
                   loadingContainerSel:       '#loading',
-                  renderSSControls:          false,
+                  renderSSControls:          true,
                   renderNavControls:         false,
                   playLinkText:              'Play Slideshow',
                   pauseLinkText:             'Pause Slideshow',
