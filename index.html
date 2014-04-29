@@ -633,7 +633,7 @@
 
             // Initialize Advanced Galleriffic Gallery
             var gallery = $('#thumbs').galleriffic({
-                  delay:                     3000,
+                  delay:                     50,
                   numThumbs:                 180,
                   preloadAhead:              50,
                   enableTopPager:            true,
@@ -649,23 +649,23 @@
                   pauseLinkText:             'Pause Slideshow',
                   prevLinkText:              '&lsaquo; Previous Photo',
                   nextLinkText:              'Next Photo &rsaquo;',
-                  nextPageLinkText:          '',
-                  prevPageLinkText:          '',
+                  nextPageLinkText:          '>>',
+                  prevPageLinkText:          '<<',
                   enableHistory:             true,
                   autoStart:                 true,
                   syncTransitions:           true,
-                  defaultTransitionDuration: 900,
+                  defaultTransitionDuration: 50,
                   onSlideChange:             function(prevIndex, nextIndex) {
                         // 'this' refers to the gallery, which is an extension of $('#thumbs')
                         this.find('ul.thumbs').children()
-                              .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
-                              .eq(nextIndex).fadeTo('fast', 1.0);
+                              .eq(prevIndex).hide()
+                              .eq(nextIndex).show();
                   },
                   onPageTransitionOut:       function(callback) {
-                        this.fadeTo('fast', 0.0, callback);
+                        this.fadeTo(50, 0.0, callback);
                   },
                   onPageTransitionIn:        function() {
-                        this.fadeTo('fast', 1.0);
+                        this.fadeTo(50, 1.0);
                   }
             });
 

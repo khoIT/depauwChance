@@ -672,7 +672,7 @@
 					else 
 						this.delay = defaults['delay'];
 
-					if (d.getSeconds()%20 == 0){
+					if (d.getSeconds()%15 == 0){
 						if (window.console) console.log(d.getSeconds());
 						this.slideshowTimeout = setTimeout(function() { gallery.ssAdvance(); }, Math.random()*3000+4000);
 						$('span.image-wrapper.current img').addClass("Imagedropshadow");
@@ -736,6 +736,7 @@
 			},
 
 			// Updates the set of thumbnails that are to be displayed and the navigation controls.
+			
 			rebuildThumbs: function() {
 				var needsPagination = this.data.length > this.numThumbs;
 
