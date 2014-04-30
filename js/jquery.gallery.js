@@ -66,10 +66,10 @@
 	
 	var defaults = {
 		delay:                     50,
-		numThumbs:                 188,
+		numThumbs:                 18,
 		preloadAhead:              50, // Set to -1 to preload all images
 		enableTopPager:            false,
-		enableBottomPager:         true,
+		enableBottomPager:         false,
 		maxPagesToShow:            7,
 		imageContainerSel:         '',
 		captionContainerSel:       '',
@@ -120,6 +120,7 @@
 					$.galleriffic.gotoImage(hash);
 					e.preventDefault();
 				}
+				return false;
 			},
 
 			// Appends an image to the end of the set of images.  Argument listItem can be either a jQuery DOM element or arbitrary html.
@@ -630,12 +631,15 @@
 
 				// Construct new hidden span for the image
 				var newSlide = this.$imageContainer
-					.append('<span class="image-wrapper current"><a class="advance-link" rel="history" href="#'+this.data[nextIndex].hash+'" title="'+imageData.title+'">&nbsp;</a></span>')
+					//distable click on image
+					//.append('<span class="image-wrapper current"><a class="advance-link" rel="history" href="#'+this.data[nextIndex].hash+'" title="'+imageData.title+'">&nbsp;</a></span>')
+					.append('<span class="image-wrapper current"><a class="advance-link" rel="history" href="" title="'+imageData.title+'">&nbsp;</a></span>')
 					.find('span.current').css('opacity', '0');
 
+				$('a .advance-link').click(function(){return false;});
 				newSlide.find('a')
 					.append(imageData.image)
-					.click(function(e) {
+					.click(function(e) {						
 						gallery.clickHandler(e, this);
 					});
 				
@@ -739,7 +743,7 @@
 			
 			rebuildThumbs: function() {
 				var needsPagination = this.data.length > this.numThumbs;
-
+				
 				// Rebuild top pager
 				if (this.enableTopPager) {
 					var $topPager = this.find('div.top');

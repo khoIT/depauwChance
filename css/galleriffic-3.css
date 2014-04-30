@@ -27,7 +27,8 @@ div.controls a {
 	padding: 5px;
 }
 div.ss-controls {
-	float: left;
+	float: right;
+	font: normal 11px/1 arial,sans-serif;
 }
 div.nav-controls {
 	float: right;
@@ -82,7 +83,7 @@ div.download {
 div.caption-container {
 	position: relative;
 	clear: left;
-	height: 75px;
+	height: 0px; /*change back if want to use caption */
 }
 span.image-caption {
 	display: block;
